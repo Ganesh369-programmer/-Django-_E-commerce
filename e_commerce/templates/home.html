@@ -9,7 +9,7 @@
 <div class="container">
 
 <div class="intro-banner-wrap">
-	<img src="{% static "images/banners/1.jpg" %}" class="img-fluid rounded">
+	<img src="{% static "images/banners/cover.jpg" %}" class="img-fluid rounded">
 </div>
 
 </div> <!-- container //  -->
@@ -25,17 +25,22 @@
 	<h3 class="section-title">Popular products</h3>
 </header><!-- sect-heading -->
 
+
+
 	
 <div class="row">
+{% for product in products %}
 	<div class="col-md-3">
 		<div class="card card-product-grid">
-			<a href="./product-detail.html" class="img-wrap"> <img src="{% static "images/items/1.jpg" %}"> </a>
+			<a href="{{ product.get_url}}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
 			<figcaption class="info-wrap">
-				<a href="./product-detail.html" class="title">Just another product name</a>
-				<div class="price mt-1">$179.00</div> <!-- price-wrap.// -->
+				<a href="{{product.get_url}}" class="title">{{ product.product_name }}</a>
+				<div class="price mt-1">${{ product.price }}</div> <!-- price-wrap.// -->
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
+{% endfor %}
+
 	<div class="col-md-3">
 		<div class="card card-product-grid">
 			<a href="./product-detail.html" class="img-wrap"> <img src="{% static "images/items/2.jpg" %}"> </a>
@@ -45,6 +50,8 @@
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
+
+
 	<div class="col-md-3">
 		<div class="card card-product-grid">
 			<a href="./product-detail.html" class="img-wrap"> <img src="{% static "images/items/3.jpg" %}"> </a>
@@ -54,6 +61,8 @@
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
+
+
 	<div class="col-md-3">
 		<div class="card card-product-grid">
 			<a href="./product-detail.html" class="img-wrap"> <img src="{% static "images/items/4.jpg" %}"> </a>
@@ -63,6 +72,8 @@
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
+
+
 	<div class="col-md-3">
 		<div class="card card-product-grid">
 			<a href="./product-detail.html" class="img-wrap"> <img src="{% static "images/items/5.jpg" %}"> </a>
@@ -72,6 +83,8 @@
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
+
+
 	<div class="col-md-3">
 		<div class="card card-product-grid">
 			<a href="./product-detail.html" class="img-wrap"> <img src="{% static "images/items/6.jpg" %}"> </a>
@@ -81,6 +94,8 @@
 			</figcaption>
 		</div>
 	</div> <!-- col.// -->
+
+
 	<div class="col-md-3">
 		<div class="card card-product-grid">
 			<a href="./product-detail.html" class="img-wrap"> <img src="{% static "images/items/7.jpg" %}"> </a>

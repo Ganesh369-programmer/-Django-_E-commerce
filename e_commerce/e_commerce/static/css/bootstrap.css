@@ -68,7 +68,7 @@ body {
   line-height: 1.5;
   color: #343a40;
   text-align: left;
-  background-color: #fff;
+    background: linear-gradient(134deg, #05003f 0%, #31343d 100%);
 }
 
 [tabindex="-1"]:focus {
@@ -200,9 +200,18 @@ figure {
   margin: 0 0 1rem;
 }
 
+.img-big-wrap{
+  margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 img {
+  display: flex;
+  justify-content: center;
   vertical-align: middle;
   border-style: none;
+  /* filter: brightness(0) saturate(100%) invert(45%) sepia(100%); */
 }
 
 svg {
@@ -4348,7 +4357,7 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background: linear-gradient(134deg, #05003f 0%, #31343d 100%);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.37rem;
